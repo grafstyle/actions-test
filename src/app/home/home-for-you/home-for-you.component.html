@@ -1,0 +1,75 @@
+<app-loader *ngIf="show_loader"></app-loader>
+<div *ngIf="err" class="error_posts err_cont">
+  <span class="material-symbols-outlined" *ngIf="err == ERR_GET_POSTS"
+    >signal_disconnected</span
+  >
+  <span class="material-symbols-outlined" *ngIf="err != ERR_GET_POSTS"
+    >public_off</span
+  >
+  <p>{{ err }}</p>
+</div>
+<div class="all_posts all_p_margin">
+  <div class="post" *ngFor="let cpost of cposts; let i = index">
+    <div class="all_content">
+      <div class="user ns">
+        <div class="img_cont">
+          <img
+            src="{{ cpost.user_of_post.image || def_person_img }}"
+            alt=""
+            [routerLink]="['/' + cpost.user_of_post.url_name]"
+          />
+        </div>
+        <div class="names">
+          <p class="name" [routerLink]="['/' + cpost.user_of_post.url_name]">
+            {{ cpost.user_of_post.name }}
+          </p>
+          <p
+            class="url_name"
+            [routerLink]="['/' + cpost.user_of_post.url_name]"
+          >
+            @{{ cpost.user_of_post.url_name }}
+          </p>
+          <p class="date" [routerLink]="['/' + cpost.user_of_post.url_name]">
+            {{ tools.formatDate(cpost.post.date_added) }}
+          </p>
+        </div>
+      </div>
+      <div class="content">
+        <div class="media grid_media" *ngIf="cpost.post.images.length > 0">
+          <div
+            class="img_cont grid_elem"
+            *ngFor="let img_or_vid of cpost.post.images; let img_i = index"
+            [style.grid-row]="
+              img_i == 0 && cpost.post.images.length > 2
+                ? '1/' + cpost.post.images.length
+                : ''
+            "
+          >
+            <img
+              src="{{ img_or_vid }}"
+              alt=""
+              *ngIf="!img_or_vid.includes('.mp4')"
+            />
+            <video
+              *ngIf="img_or_vid.includes('.mp4')"
+              controls
+              autoplay
+              loop
+              [muted]="'muted'"
+            >
+              <source src="{{ img_or_vid }}" type="video/mp4" />
+            </video>
+          </div>
+        </div>
+        <div class="title">
+          <p>{{ cpost.post.title }}</p>
+        </div>
+      </div>
+      <app-likes
+        [id_post]="cpost.post.id"
+        [cant_likes]="cpost.likes.length"
+      ></app-likes>
+    </div>
+    <app-comments [id_post]="cpost.post.id"></app-comments>
+  </div>
+</div>
