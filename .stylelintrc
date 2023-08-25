@@ -1,12 +1,6 @@
 {
-  "extends": [
-    "stylelint-config-standard-scss", "stylelint-config-prettier"
-  ],
-  "rules": {
-    "value-keyword-case": null,
-    "at-rule-no-unknown": null,
-    "at-rule-empty-line-before": null,
-    "declaration-empty-line-before": null,
-    "selector-class-pattern": null
-  }
+    "extends": "stylelint-config-standard",
+    "rules": {
+        "indentation": 4
+    }
 }
