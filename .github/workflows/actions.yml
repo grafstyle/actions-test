@@ -21,7 +21,7 @@ jobs:
       - name: Lint Code Base
         uses: github/super-linter@v4
         env:
-          VALIDATE_ALL_CODEBASE: false
+          VALIDATE_ALL_CODEBASE: true
           OUTPUT_FOLDER: .github/workflows
           OUTPUT_DETAILS: detailed
           DEFAULT_BRANCH: master
