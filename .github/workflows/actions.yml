@@ -22,8 +22,6 @@ jobs:
         uses: github/super-linter@v4
         env:
           VALIDATE_ALL_CODEBASE: true
-          OUTPUT_FOLDER: .github/workflows
-          OUTPUT_DETAILS: detailed
           DEFAULT_BRANCH: master
           FILTER_REGEX_EXCLUDE: (
             .husky/ , .dockerignore,
@@ -34,7 +32,6 @@ jobs:
           TYPESCRIPT_ES_CONFIG_FILE: .eslintrc.json
           VALIDATE_TYPESCRIPT_ES: true
           VALIDATE_CSS: true
-          DISABLE_ERRORS: true
           VALIDATE_JAVASCRIPT_STANDARD: true
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
