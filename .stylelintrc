@@ -6,6 +6,15 @@
         "custom-property-pattern" : [ null, { "severity": "warning" }],
         "selector-combinator-space-before" : [ null, { "severity": "warning" }],
         "property-no-vendor-prefix" : [ null, { "severity": "warning" }],
-        "declaration-empty-line-before" : [ null, { "severity": "warning" }]
+        "declaration-empty-line-before" : [ null, { "severity": "warning" }],
+        "no-duplicate-selectors" : [ null, { "severity": "warning" }],
+        "custom-property-empty-line-before" : [ null, { "severity": "warning" }],
+        "keyframes-name-pattern" : [ null, { "severity": "warning" }],
+        "no-empty-source" : [ null, { "severity": "warning" }],
+        "elector-pseudo-element-colon-notation" : [ null, { "severity": "warning" }],
+        "shorthand-property-no-redundant-values" : [ null, { "severity": "warning" }],
+        "indentation" : [ null, { "severity": "warning" }],
+        "alpha-value-notation" : [ null, { "severity": "warning" }],
+        "color-function-notation" : [ null, { "severity": "warning" }]
     }
 }
