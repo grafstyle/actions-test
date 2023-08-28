@@ -1,6 +1,9 @@
 {
     "extends": "stylelint-config-standard",
     "rules": {
-        "selector-class-pattern": [ null, { "severity": "warning" }]
+        "selector-class-pattern": [ null, { "severity": "warning" }],
+        "no-descending-specificity" : [ null, { "severity": "warning" }],
+        "custom-property-pattern" : [ null, { "severity": "warning" }]
+
     }
 }
