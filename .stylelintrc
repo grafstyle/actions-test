@@ -11,10 +11,11 @@
         "custom-property-empty-line-before" : [ null, { "severity": "warning" }],
         "keyframes-name-pattern" : [ null, { "severity": "warning" }],
         "no-empty-source" : [ null, { "severity": "warning" }],
-        "elector-pseudo-element-colon-notation" : [ null, { "severity": "warning" }],
+        "selector-pseudo-element-colon-notation" : [ null, { "severity": "warning" }],
         "shorthand-property-no-redundant-values" : [ null, { "severity": "warning" }],
         "indentation" : [ null, { "severity": "warning" }],
         "alpha-value-notation" : [ null, { "severity": "warning" }],
-        "color-function-notation" : [ null, { "severity": "warning" }]
+        "color-function-notation" : [ null, { "severity": "warning" }],
+        "selector-descendant-combinator-no-non-space" : [ null, { "severity": "warning" }]
     }
 }
