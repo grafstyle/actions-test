@@ -3,7 +3,9 @@
     "rules": {
         "selector-class-pattern": [ null, { "severity": "warning" }],
         "no-descending-specificity" : [ null, { "severity": "warning" }],
-        "custom-property-pattern" : [ null, { "severity": "warning" }]
-
+        "custom-property-pattern" : [ null, { "severity": "warning" }],
+        "selector-combinator-space-before" : [ null, { "severity": "warning" }],
+        "property-no-vendor-prefix" : [ null, { "severity": "warning" }],
+        "declaration-empty-line-before" : [ null, { "severity": "warning" }]
     }
 }
